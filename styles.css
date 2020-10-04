@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background: rgb(3, 51, 83);
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul {
+  margin: 0;
+}
+nav li a {
+  font-size: x-large;
+  font-family: "Mukta", sans-serif;
+  padding: 20px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+nav li {
+  list-style-type: none;
+}
+.nav_link {
+  display: flex;
+  margin-right: 5%;
+}
+
+nav li:hover {
+  background: rgba(68, 68, 214, 0.74);
+}
+
+.welcome {
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(17, 83, 170),
+    rgb(80, 221, 221)
+  );
+  font-family: "Mukta", sans-serif;
+  font-size: xx-large;
+  color: white;
+  height: 100vh;
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: -40px;
+}
+
+.projects {
+  margin: 20px auto;
+  width: 50%;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "pro1 pro2"
+    "pro3 pro4";
+}
+
+.projects img {
+  width: 100%;
+}
+
+.pro1 {
+  grid-area: pro1;
+}
+
+.pro2 {
+  grid-area: pro2;
+}
+
+.pro3 {
+  grid-area: pro3;
+}
+
+.pro4 {
+  grid-area: pro4;
+}
+
+.contacts {
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contacts a {
+  display: block;
+}
+.contacts img {
+  max-width: 100%;
+  width: 100px;
+
+  border-radius: 50%;
+}
+
+@media (max-width: 450px) {
+  nav li a {
+    font-size: large;
+  }
+  .welcome {
+    text-align: center;
+    font-size: 16px;
+  }
+  h1 {
+    display: block;
+    margin-bottom: 0px;
+  }
+  .welcome p {
+    font-size: 24px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts {
+    gap: 10px;
+
+    margin: auto;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+  }
+  .contacts a {
+    display: block;
+  }
+  .contacts img {
+    max-width: 100%;
+  }
+}
